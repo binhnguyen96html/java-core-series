@@ -9,12 +9,15 @@ public class Javacore1Application {
 	public static void main(String[] args) {
 		// SpringApplication.run(Javacore1Application.class, args);
 
-		// CaChuon caChuon1 = new CaChuon();
+		CaChuon caChuon = new CaChuon();
 
-		CaChuon caChuon2 = new CaChuon("yellow", "black", "yellow2", "black2");
+		// Tinh da hinh - polymorphism: trong 1 class co nhieu method cung ten nhung
+		// tham so se khac nhau => overloading
+		caChuon.boi();
+		caChuon.boi("Ca Chuon boi theo kieu cua Ca Chuon");
 
-		System.out.println("Color eye: " + caChuon2.getColorEye());
-
+		CaBayMau caBayMau = new CaBayMau();
+		caBayMau.boi("Ca Bay Mau boi theo kieu Ca Bay Mau");
 	}
 
 }
