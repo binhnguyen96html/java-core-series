@@ -9,24 +9,12 @@ public class Javacore1Application {
 	public static void main(String[] args) {
 		// SpringApplication.run(Javacore1Application.class, args);
 
-		// Boxing is the process of converting a primitive type into its corresponding
-		// wrapper class object. This can be done manually or automatically
-		// (auto-boxing).
-		// primitive -> wrapper : boxing -> manually
-		int a = 50;
-		Integer a2 = new Integer(a);
+		// CaChuon caChuon1 = new CaChuon();
 
-		// auto boxing
-		Integer a3 = 5;
-		
+		CaChuon caChuon2 = new CaChuon("yellow", "black", "yellow2", "black2");
 
-		// Unboxing is the reverse process where the object of a wrapper class is
-		// converted back to its corresponding primitive type.
-		// manual unboxing
-		Integer b = new Integer(50);
+		System.out.println("Color eye: " + caChuon2.getColorEye());
 
-		// auto unboxing
-		int b2 = b;
 	}
 
 }
