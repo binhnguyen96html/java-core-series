@@ -10,9 +10,8 @@ public class Javacore1Application {
 		// SpringApplication.run(Javacore1Application.class, args);
 		
 		CaChuon caChuon = new CaChuon();
-		caChuon.colorEye = "yellow";
 
-		System.out.println("Color eye: " + caChuon.colorEye);
+		caChuon.boi();
 	}
 
 }

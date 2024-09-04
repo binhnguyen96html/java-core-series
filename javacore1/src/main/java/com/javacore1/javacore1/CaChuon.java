@@ -1,7 +1,7 @@
 package com.javacore1.javacore1;
 
-public class CaChuon {
+public class CaChuon extends LopCa {
   
-  public String colorEye;
-  public String colorSkin;
+  private String colorEye;
+  private String colorSkin;
 }

@@ -2,8 +2,8 @@ package com.javacore1.javacore1;
 
 public class LopCa {
   
-  public void boiFunction(){
-    
+  protected void boi(){
+    System.out.println("ca nao ma cha biet boi");
   }
 
 }
