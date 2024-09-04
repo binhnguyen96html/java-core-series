@@ -5,22 +5,19 @@ public class CaChuon extends LopCa {
   private String colorEye;
   private String colorSkin;
 
+
+  // Overriding 
+  public void boi(){
+    System.out.println("Ca Chuon boi theo kieu cua Ca Chuon");
+  }
+
   //default constructor: no parameters
   public CaChuon(){
 
-  }
-
-
-  public CaChuon(String colorEye, String colorSkin, String colorEyeParent, String colorSkinParent){
-    this.colorEye = colorEye;
-    this.colorSkin = colorSkin;
-    super.colorEye = colorEyeParent;
-    super.colorSkin = colorSkinParent;
-  }
-
+  } 
 
   public String getColorEye() {
-    return "Children: " + this.colorEye + " , Parent: " + super.colorEye;
+    return this.colorEye;
   }
 
   public String getColorSkin() {

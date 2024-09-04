@@ -10,14 +10,10 @@ public class Javacore1Application {
 		// SpringApplication.run(Javacore1Application.class, args);
 
 		CaChuon caChuon = new CaChuon();
-
-		// Tinh da hinh - polymorphism: trong 1 class co nhieu method cung ten nhung
-		// tham so se khac nhau => overloading
 		caChuon.boi();
-		caChuon.boi("Ca Chuon boi theo kieu cua Ca Chuon");
 
 		CaBayMau caBayMau = new CaBayMau();
-		caBayMau.boi("Ca Bay Mau boi theo kieu Ca Bay Mau");
+		caBayMau.boi();
 	}
 
 }
