@@ -40,7 +40,7 @@ public class JdbcApplication {
 				System.out.println("street: " + rs.getString("street"));
 				System.out.println("district: " + rs.getString("district"));
 				System.out.println("ward: " + rs.getString("ward"));
-				System.out.println("floorarea: " + rs.getInt("floorarea"));
+				System.out.println("floorarea: " + rs.getString("floorarea"));
 			}
 
 		} catch (SQLException e) {
