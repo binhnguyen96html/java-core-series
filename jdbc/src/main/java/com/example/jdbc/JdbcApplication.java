@@ -9,6 +9,10 @@ import java.sql.Statement;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.example.jdbc.constant.SystemConstant;
+
+import ch.qos.logback.core.util.StringUtil;
+
 
 @SpringBootApplication
 public class JdbcApplication {
@@ -16,18 +20,23 @@ public class JdbcApplication {
 	static final String DB_URL = "jdbc:mysql://localhost/sys";
 	static final String USER = "root";
 	static final String PASS = "Ilovejob123@";
-	static final String QUERY = "SELECT * from building";
 
 	public static void main(String[] args) {
 		// SpringApplication.run(JdbcApplication.class, args);
 
-		System.out.println("hello");
+		// String name = null;
+		// String street = null;
+		// String district = null;
+		// String ward = null;
+		// String floorArea = null;
+		// Integer numberOfBasement = 100;
 
-		String name = null;
-		String street = null;
-		String ward = null;
-		Integer floorArea = 100;
-		Integer numberOfBasement = 100;
+		String name = "name 1";
+		String street = "street 1";
+		String district = "district 1";
+		String ward = "ward 1";
+		String floorArea = "floorarea 1";
+		Integer numberOfBasement = 50;
 
 
 		Connection conn = null;
@@ -35,6 +44,29 @@ public class JdbcApplication {
 		ResultSet rs = null;
 
 		try {
+			// Cong chuoi
+			String query = "SELECT * FROM building " + SystemConstant.ONE_EQUAL_ONE;
+			if(!StringUtil.isNullOrEmpty(name)){ 
+				query = query + " and name like '%" + name + "%'";
+			}
+			if(!StringUtil.isNullOrEmpty(street)){ 
+				query = query + " and street like '%" + street + "%'";
+			}
+			if(!StringUtil.isNullOrEmpty(district)){ 
+				query = query + " and district like '%" + district + "%'";
+			}
+			if(!StringUtil.isNullOrEmpty(ward)){ 
+				query = query + " and ward like '%" + ward + "%'";
+			}
+			if(!StringUtil.isNullOrEmpty(floorArea)){ 
+				query = query + " and floorarea like '%" + floorArea + "%'";
+			}
+			if(numberOfBasement != null){
+				query = query + " and basement like '%" + numberOfBasement + "%'";
+			}
+
+			System.out.println("query: " + query);
+
 			// Step 1: Load driver 
 			// Old (deprecated)
 			// Class.forName("com.mysql.jdbc.Driver");
@@ -46,7 +78,7 @@ public class JdbcApplication {
 			stmt = conn.createStatement();
 
 			// Step 4: Execute sql (thuc thi cau sql)
-			rs = stmt.executeQuery(QUERY.toString());
+			rs = stmt.executeQuery(query.toString());
 
 			// metadata
 			ResultSetMetaData rsmd = rs.getMetaData();
