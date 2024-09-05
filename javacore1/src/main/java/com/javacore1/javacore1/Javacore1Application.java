@@ -9,11 +9,16 @@ public class Javacore1Application {
 	public static void main(String[] args) {
 		// SpringApplication.run(Javacore1Application.class, args);
 
-		CaChuon caChuon = new CaChuon();
-		caChuon.boi();
+		// Cach nay khi class CaChuon ko thua ke 
+		CaChuon caChuon1 = new CaChuon();
+		// boi(): se vao method boi() cua thang con
+		caChuon1.boi();
 
-		CaBayMau caBayMau = new CaBayMau();
-		caBayMau.boi();
+		// Neu da thua ke: thi goi parent class
+		LopCa caChuon2 = new CaChuon();
+		// boi(): se vao method boi() cua thang me
+		caChuon2.boi();
+
 	}
 
 }
