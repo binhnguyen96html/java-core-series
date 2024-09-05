@@ -1,6 +1,6 @@
 package com.javacore1.javacore1;
 
-public class CaChuon extends LopCa {
+public class CaChuon{
   
   private String colorEye;
   private String colorSkin;
@@ -10,18 +10,25 @@ public class CaChuon extends LopCa {
 
   } 
 
+  public CaChuon(String colorEye, String colorSkin) {
+    this.colorEye = colorEye;
+    this.colorSkin = colorSkin;
+  }
+
   public String getColorEye() {
     return this.colorEye;
+  }
+
+  public void setColorEye(String colorEye) {
+    this.colorEye = colorEye;
   }
 
   public String getColorSkin() {
     return this.colorSkin;
   }
 
+  public void setColorSkin(String colorSkin) {
+    this.colorSkin = colorSkin;
+  }
 
-    // Overriding 
-    @Override
-    public void boi(){
-      System.out.println("Ca Chuon boi theo kieu cua Ca Chuon");
-    }
 }
