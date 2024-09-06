@@ -1,7 +1,6 @@
 package com.example.jdbc;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
@@ -10,6 +9,7 @@ import java.sql.Statement;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.jdbc.constant.SystemConstant;
+import com.example.jdbc.utils.ConnectionUtils;
 
 import ch.qos.logback.core.util.StringUtil;
 
@@ -17,9 +17,9 @@ import ch.qos.logback.core.util.StringUtil;
 @SpringBootApplication
 public class JdbcApplication {
 
-	static final String DB_URL = "jdbc:mysql://localhost/sys";
-	static final String USER = "root";
-	static final String PASS = "Ilovejob123@";
+	// static final String DB_URL = "jdbc:mysql://localhost/sys";
+	// static final String USER = "root";
+	// static final String PASS = "Ilovejob123@";
 
 	public static void main(String[] args) {
 		// SpringApplication.run(JdbcApplication.class, args);
@@ -73,7 +73,8 @@ public class JdbcApplication {
 			// Class.forName("com.mysql.jdbc.Driver");
 
 			// Step 2: Create connection
-			conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			// conn = DriverManager.getConnection(DB_URL, USER, PASS);
+			conn = ConnectionUtils.getConnection();
 
 			// Step 3: initialize statmenet (Khoi tao doi tuong)
 			stmt = conn.createStatement();
