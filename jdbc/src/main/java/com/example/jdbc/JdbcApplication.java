@@ -44,25 +44,26 @@ public class JdbcApplication {
 		ResultSet rs = null;
 
 		try {
-			// Cong chuoi
-			String query = "SELECT * FROM building " + SystemConstant.ONE_EQUAL_ONE;
+			// Cong chuoi - StringBuilder
+			StringBuilder query = new StringBuilder("SELECT * FROM building " + SystemConstant.ONE_EQUAL_ONE);
+
 			if(!StringUtil.isNullOrEmpty(name)){ 
-				query = query + " and name like '%" + name + "%'";
+				query.append(" and name like '%" + name + "%'");
 			}
 			if(!StringUtil.isNullOrEmpty(street)){ 
-				query = query + " and street like '%" + street + "%'";
+				query.append(" and street like '%" + street + "%'");
 			}
 			if(!StringUtil.isNullOrEmpty(district)){ 
-				query = query + " and district like '%" + district + "%'";
+				query.append(" and district like '%" + district + "%'");
 			}
 			if(!StringUtil.isNullOrEmpty(ward)){ 
-				query = query + " and ward like '%" + ward + "%'";
+				query.append(" and ward like '%" + ward + "%'");
 			}
 			if(!StringUtil.isNullOrEmpty(floorArea)){ 
-				query = query + " and floorarea like '%" + floorArea + "%'";
+				query.append(" and floorarea like '%" + floorArea + "%'");
 			}
 			if(numberOfBasement != null){
-				query = query + " and basement like '%" + numberOfBasement + "%'";
+				query.append(" and basement like '%" + numberOfBasement + "%'");
 			}
 
 			System.out.println("query: " + query);
