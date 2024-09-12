@@ -1,12 +1,13 @@
 package com.example.jdbc.input;
 
-public class BuildingSearchInput {
+public class BuildingSearchInput2 {
   
   private String name;
   private String street;
   private String district;
   private String ward;
   private Integer floorArea;
+  private String type;
   
 
   public String getName() {
@@ -49,5 +50,13 @@ public class BuildingSearchInput {
     this.floorArea = floorArea;
   }
  
+
+  public String getType() {
+    return this.type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
 
 }

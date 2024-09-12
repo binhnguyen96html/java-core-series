@@ -7,6 +7,7 @@ public class BuildingDTO extends BaseDTO {
   private String district ;
   private String ward ;
   private Integer floorArea ;
+  private String type;
 
 
   public String getName() {
@@ -50,15 +51,12 @@ public class BuildingDTO extends BaseDTO {
   }
 
 
-  @Override
-  public String toString() {
-    return "{" +
-      " name='" + getName() + "'" +
-      ", street='" + getStreet() + "'" +
-      ", district='" + getDistrict() + "'" +
-      ", ward='" + getWard() + "'" +
-      ", floorArea='" + getFloorArea() + "'" +
-      "}";
+  public String getType() {
+    return this.type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
   }
   
   

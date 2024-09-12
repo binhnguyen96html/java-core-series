@@ -1,13 +1,23 @@
-package com.example.jdbc.input;
+package com.example.jdbc.dao.anhyeuem;
 
-public class BuildingSearchInput {
-  
-  private String name;
-  private String street;
-  private String district;
-  private String ward;
-  private Integer floorArea;
-  
+public class BuildingAnhyeuem2 {
+
+  private Long id;
+  private String name ;
+  private String street ;
+  private String district ;
+  private String ward ;
+  private Integer floorArea ;
+  private String type;
+ 
+
+  public Long getId() {
+    return this.id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
 
   public String getName() {
     return this.name;
@@ -48,6 +58,16 @@ public class BuildingSearchInput {
   public void setFloorArea(Integer floorArea) {
     this.floorArea = floorArea;
   }
- 
+  
+
+  public String getType() {
+    return this.type;
+  }
+
+  public void setType(String type) {
+    this.type = type;
+  }
+
+  
 
 }

@@ -1,11 +1,12 @@
 package com.example.jdbc.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.example.jdbc.dto.BuildingDTO;
 import com.example.jdbc.input.BuildingSearchInput;
+import com.example.jdbc.input.BuildingSearchInput2;
 import com.example.jdbc.output.BuildingOutput;
+import com.example.jdbc.output.BuildingOutput2;
 import com.example.jdbc.service.BuildingService;
 import com.example.jdbc.service.impl.BuildingServiceImpl;
 
@@ -20,6 +21,14 @@ public class BuildingController {
 
     return buildingModels;
   }
+
+  public List<BuildingOutput2> findBuilding2 (BuildingSearchInput2 buildingSearch){
+    List<BuildingOutput2> buildingModels = buildingService.findBuilding2(buildingSearch);
+
+    return buildingModels;
+  }
+
+  
 
   public BuildingDTO insert(BuildingDTO newBuilding){
     return null;

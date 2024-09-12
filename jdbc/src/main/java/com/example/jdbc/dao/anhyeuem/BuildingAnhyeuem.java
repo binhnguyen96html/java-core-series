@@ -8,8 +8,6 @@ public class BuildingAnhyeuem {
   private String district ;
   private String ward ;
   private Integer floorArea ;
-
-
  
 
   public Long getId() {
@@ -59,19 +57,6 @@ public class BuildingAnhyeuem {
   public void setFloorArea(Integer floorArea) {
     this.floorArea = floorArea;
   }
-  
 
-  @Override
-  public String toString() {
-    return "{" +
-      " id='" + getId() + "'" +
-      ", name='" + getName() + "'" +
-      ", street='" + getStreet() + "'" +
-      ", district='" + getDistrict() + "'" +
-      ", ward='" + getWard() + "'" +
-      ", floorArea='" + getFloorArea() + "'" +
-      "}";
-  }
-  
 
 }
