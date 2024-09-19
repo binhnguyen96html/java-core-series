@@ -1,0 +1,35 @@
+package com.example.exercise_1.utils;
+
+public class BuildingTypeUtil {
+
+	public static String convertCodeToName(String code) {
+		
+		if(code.equals("tang_tret")) {
+			return "tầng trệt";
+		}else if(code.equals("noi_that")) {
+			return "nội thất";
+		}else if(code.equals("nguyen_can")) {
+			return "nguyên căn";
+		}
+		
+		return "";
+		
+//		switch(code) {
+//			case "tang_tret": {
+//				return "tầng trệt";
+//			}
+//			
+//			case "noi_that": {
+//				return "nội thất";
+//			}
+//			
+//			case "nguyen_can": {
+//				return "nguyên căn";
+//			}
+//		
+//		default:
+//			return null;
+//		}		
+			
+	}
+}

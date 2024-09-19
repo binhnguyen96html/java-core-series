@@ -1,0 +1,51 @@
+package com.example.exercise_1.utils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.exercise_1.constant.SystemConstant;
+
+public class BuildingTypeUtil {
+
+	public static String getType(String oldType) {
+		List<String> newTypes = new ArrayList<>();
+
+		/*
+		 * if(oldType != null) { for(String item: oldType.split(",")) {
+		 * if(item.equals(SystemConstant.TANG_TRET_TYPE_CODE)) {
+		 * newTypes.add(SystemConstant.TANG_TRET_NAME); //continue; }else
+		 * if(item.equals("noi_that")) { newTypes.add("nội thất"); }else
+		 * if(item.equals("nguyen_can")) { newTypes.add("nguyên căn"); } } return
+		 * String.join(",", newTypes); }
+		 * 
+		 * return null;
+		 */
+
+		if (oldType != null) {
+			for (String item : oldType.split(",")) {
+
+				switch (item) {
+				
+				case SystemConstant.TANG_TRET_TYPE_CODE: {
+					newTypes.add(SystemConstant.TANG_TRET_NAME);
+				}
+
+				case SystemConstant.NOI_THAT_TYPE_CODE: {
+					newTypes.add(SystemConstant.NOI_THAT_NAME);
+				}
+
+				case SystemConstant.NGUYEN_CAN_TYPE_CODE: {
+					newTypes.add(SystemConstant.NGUYEN_CAN_NAME);
+				}
+
+				default:
+					return null;
+				}
+			}
+			return String.join(",", newTypes);
+		}
+		
+		return null;
+
+	}
+}

@@ -1,0 +1,12 @@
+package com.example.exercise_1.dao;
+
+public class BuildingDao {
+	List<BuildingDaoModel> findBuilding(
+			String name,
+			String street,
+			String district,
+			String ward,
+			Integer floorarea,
+			String type
+	);
+}

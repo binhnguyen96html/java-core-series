@@ -1,0 +1,37 @@
+package com.example.exercise_1.utils;
+
+import com.example.exercise_1.constant.SystemConstant;
+
+public class BuildingTypeUtil {
+
+	public static String convertCodeToName(String code) {
+		
+//		if(code.equals("tang_tret")) {
+//			return "tầng trệt";
+//		}else if(code.equals("noi_that")) {
+//			return "nội thất";
+//		}else if(code.equals("nguyen_can")) {
+//			return "nguyên căn";
+//		}
+//		
+//		return "";
+		
+		switch(code) {
+			case SystemConstant.TANG_TRET_TYPE_CODE: {
+				return SystemConstant.TANG_TRET_NAME;
+			}
+			
+			case SystemConstant.NOI_THAT_TYPE_CODE: {
+				return SystemConstant.NOI_THAT_NAME;
+			}
+			
+			case SystemConstant.NGUYEN_CAN_TYPE_CODE: {
+				return SystemConstant.NGUYEN_CAN_NAME;
+			}
+		
+		default:
+			return null;
+		}		
+			
+	}
+}
